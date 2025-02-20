@@ -9,13 +9,13 @@ const features = [
   },
   {
     icon: MessageSquare,
-    title: "Быстрый отклик",
-    description: "Создавай пост и получай уведомления о новых напарниках прямо в Telegram"
+    title: "Простой Telegram бот",
+    description: "Создавай пост через бота и получай уведомления о новых напарниках прямо в Telegram"
   },
   {
     icon: Users,
     title: "Активное комьюнити",
-    description: "Тысячи геймеров уже нашли своих идеальных тиммейтов через Gamepals"
+    description: "Тысячи геймеров уже нашли своих идеальных тиммейтов через Gamepals в Telegram"
   },
   {
     icon: Bell,
@@ -34,7 +34,7 @@ export const Features = () => {
             Создан для геймеров
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Gamepals помогает найти идеальных напарников для твоих любимых игр
+            Gamepals - Telegram бот, который помогает найти идеальных напарников для твоих любимых игр
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

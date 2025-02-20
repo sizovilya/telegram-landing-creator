@@ -20,13 +20,19 @@ export const Hero = () => {
             CS2, Dota 2, Fortnite, PUBG и другие популярные игры. 
             Находи напарников для любимых игр прямо в Telegram!
           </p>
+          <div className="bg-secondary/50 rounded-lg p-4 mb-8 animate-fade-in">
+            <p className="text-sm md:text-base text-muted-foreground">
+              Gamepals - это Telegram бот для поиска напарников. Просто напиши боту, создай пост о поиске тиммейтов, 
+              и получай уведомления когда кто-то захочет присоединиться к игре!
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               className="group hover:scale-105 transition-transform duration-300" 
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
-              Найти напарника
+              Открыть бота в Telegram
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
