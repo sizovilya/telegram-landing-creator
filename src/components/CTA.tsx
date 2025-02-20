@@ -9,10 +9,10 @@ export const CTA = () => {
       <div className="container px-4 text-center relative">
         <div className="max-w-3xl mx-auto animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Готов найти тиммейтов?
+            Готов найти своих Gamepals?
           </h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Присоединяйся к тысячам игроков, которые уже нашли своих идеальных напарников
+            Присоединяйся к тысячам игроков, которые уже нашли друзей для совместных игр
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -21,7 +21,7 @@ export const CTA = () => {
               className="group bg-white text-primary hover:bg-white/90"
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
-              Начать поиск
+              Найти напарников
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button

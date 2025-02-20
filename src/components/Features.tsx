@@ -4,23 +4,23 @@ import { MessageSquare, Users, Gamepad, Bell } from "lucide-react";
 const features = [
   {
     icon: Gamepad,
-    title: "Все популярные игры",
-    description: "CS2, Dota 2, Fortnite, PUBG и многие другие. Выбирай любимую игру и находи команду"
+    title: "Любые игры",
+    description: "CS2, Dota 2, Fortnite, PUBG и многие другие. Находи напарников для любой игры"
   },
   {
     icon: MessageSquare,
-    title: "Быстрые отклики",
-    description: "Создавай пост и получай уведомления о новых откликах прямо в Telegram"
+    title: "Быстрый отклик",
+    description: "Создавай пост и получай уведомления о новых напарниках прямо в Telegram"
   },
   {
     icon: Users,
-    title: "Большое комьюнити",
-    description: "Тысячи игроков уже используют бота для поиска напарников"
+    title: "Активное комьюнити",
+    description: "Тысячи геймеров уже нашли своих идеальных тиммейтов через Gamepals"
   },
   {
     icon: Bell,
     title: "Умные уведомления",
-    description: "Бот автоматически следит за комментариями и сообщает о новых откликах"
+    description: "Бот следит за новыми откликами и сразу сообщает о потенциальных напарниках"
   }
 ];
 
@@ -34,7 +34,7 @@ export const Features = () => {
             Создан для геймеров
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Простой и удобный способ найти тиммейтов для любимых игр
+            Gamepals помогает найти идеальных напарников для твоих любимых игр
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
