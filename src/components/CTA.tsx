@@ -27,8 +27,7 @@ export const CTA = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="group border-white text-white hover:bg-white/10 flex items-center gap-2"
+              className="group bg-white/20 hover:bg-white/30 text-white border-0 flex items-center gap-2"
               onClick={() => window.open("https://t.me/support_chat", "_blank")}
             >
               <Send className="h-5 w-5" />
