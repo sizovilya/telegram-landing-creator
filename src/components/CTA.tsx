@@ -1,6 +1,6 @@
 
 import { Button } from "./ui/button";
-import { ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, MessageSquare, Send } from "lucide-react";
 
 export const CTA = () => {
   return (
@@ -18,20 +18,22 @@ export const CTA = () => {
             <Button
               size="lg"
               variant="secondary"
-              className="group bg-white text-primary hover:bg-white/90"
+              className="group bg-white text-primary hover:bg-white/90 flex items-center gap-2"
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
+              <Send className="h-5 w-5" />
               Найти напарников
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="group border-white text-white hover:bg-white/10"
+              className="group border-white text-white hover:bg-white/10 flex items-center gap-2"
               onClick={() => window.open("https://t.me/support_chat", "_blank")}
             >
+              <Send className="h-5 w-5" />
               Техподдержка
-              <MessageSquare className="ml-2 h-4 w-4" />
+              <MessageSquare className="h-4 w-4" />
             </Button>
           </div>
         </div>
