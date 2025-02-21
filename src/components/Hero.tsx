@@ -1,12 +1,12 @@
 
-import { ArrowRight, Send } from "lucide-react";
+import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-[#1A1F2C] relative overflow-hidden">
       {/* Фоновые элементы */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80')] bg-cover bg-center opacity-10" />
       
       {/* Декоративные элементы */}
       <div className="absolute inset-0">
@@ -17,6 +17,7 @@ export const Hero = () => {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <div className="space-y-8">
           <div className="flex items-center justify-center gap-3 mb-8 animate-fade-up">
+            <GamepadIcon className="h-8 w-8 text-primary animate-bounce" />
             <span className="inline-block px-6 py-2 text-xl font-bold rounded-full bg-gradient-to-r from-primary/10 to-primary-hover/10 text-primary backdrop-blur-sm hover:scale-105 transition-all duration-300 cursor-pointer">
               Gamepals
             </span>
@@ -60,26 +61,6 @@ export const Hero = () => {
               Игровой канал
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-          </div>
-
-          {/* Популярные игры */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 animate-fade-up max-w-3xl mx-auto" style={{ animationDelay: '800ms' }}>
-            {['CS2', 'Dota 2', 'Fortnite', 'PUBG'].map((game, index) => (
-              <div 
-                key={game}
-                className="aspect-video rounded-lg overflow-hidden relative group cursor-pointer"
-                style={{
-                  backgroundImage: `url(/placeholder.svg)`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-medium text-sm md:text-base">{game}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
