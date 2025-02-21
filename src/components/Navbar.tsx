@@ -11,7 +11,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2 group">
               <GamepadIcon className="h-6 w-6 text-primary group-hover:text-primary-hover transition-colors" />
-              <span className="text-xl font-semibold bg-gradient-to-r from-primary to-primary-hover hover:to-primary bg-clip-text text-transparent transition-all duration-300">
+              <span className="text-xl font-semibold animate-rainbow-text bg-gradient-to-r from-[#FF0080] via-[#9b87f5] to-[#7E69AB] hover:from-[#7E69AB] hover:via-[#9b87f5] hover:to-[#FF0080] bg-clip-text text-transparent transition-all duration-300">
                 <span className="inline-block hover:-translate-y-0.5 transition-transform duration-300">G</span>
                 <span className="inline-block hover:-translate-y-0.5 transition-transform duration-300 delay-[50ms]">a</span>
                 <span className="inline-block hover:-translate-y-0.5 transition-transform duration-300 delay-100">m</span>

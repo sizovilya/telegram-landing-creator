@@ -26,8 +26,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#4070F4",
-          hover: "#2952CC",
+          DEFAULT: "#9b87f5",
+          hover: "#7E69AB",
         },
         secondary: {
           DEFAULT: "#F8FAFC",
@@ -39,7 +39,7 @@ export default {
         },
         accent: {
           DEFAULT: "#E2E8F0",
-          foreground: "#0F172A",
+          foreground: "#1A1F2C",
         },
       },
       fontFamily: {
@@ -72,12 +72,23 @@ export default {
             opacity: "1",
           },
         },
+        "rainbow-text": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
+        "rainbow-text": "rainbow-text 3s ease infinite",
       },
     },
   },
