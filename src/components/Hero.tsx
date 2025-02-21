@@ -1,12 +1,12 @@
 
-import { ArrowRight, GamepadIcon } from "lucide-react";
+import { ArrowRight, Send } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-[#1A1F2C] relative overflow-hidden">
       {/* Фоновые элементы */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80')] bg-cover bg-center opacity-10" />
       
       {/* Декоративные элементы */}
       <div className="absolute inset-0">
@@ -17,7 +17,6 @@ export const Hero = () => {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <div className="space-y-8">
           <div className="flex items-center justify-center gap-3 mb-8 animate-fade-up">
-            <GamepadIcon className="h-8 w-8 text-primary animate-bounce" />
             <span className="inline-block px-6 py-2 text-xl font-bold rounded-full bg-gradient-to-r from-primary/10 to-primary-hover/10 text-primary backdrop-blur-sm hover:scale-105 transition-all duration-300 cursor-pointer">
               Gamepals
             </span>
@@ -44,20 +43,22 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: '600ms' }}>
             <Button 
               size="lg" 
-              className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300" 
+              className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300 flex items-center gap-2" 
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
+              <Send className="h-5 w-5" />
               Открыть бота в Telegram
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white border-white/20" 
+              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white border-white/20 flex items-center gap-2" 
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
+              <Send className="h-5 w-5" />
               Игровой канал
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
 
