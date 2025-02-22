@@ -13,21 +13,27 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
       {/* Фоновые названия игр */}
       <div className="absolute inset-0 overflow-hidden">
-        {gameNames.map((game, index) => (
-          <div
-            key={game}
-            className="absolute text-gray-200 font-bold opacity-30 select-none"
-            style={{
-              fontSize: `${Math.random() * (4 - 2) + 2}rem`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              transform: `rotate(${Math.random() * 360}deg)`,
-              animation: `float ${Math.random() * (8 - 5) + 5}s infinite ease-in-out`,
-            }}
-          >
-            {game}
-          </div>
-        ))}
+        {gameNames.map((game) => {
+          const rotation = Math.random() * 360;
+          const animationDuration = Math.random() * (8 - 5) + 5;
+          
+          return (
+            <div
+              key={game}
+              className="absolute text-gray-200 font-bold opacity-30 select-none"
+              style={{
+                fontSize: `${Math.random() * (4 - 2) + 2}rem`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                transform: `rotate(${rotation}deg)`,
+                animation: `float ${animationDuration}s infinite ease-in-out`,
+                ['--rotation' as string]: `${rotation}deg`,
+              }}
+            >
+              {game}
+            </div>
+          );
+        })}
       </div>
       
       {/* Декоративные элементы */}
@@ -87,12 +93,14 @@ export const Hero = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
-          50% { transform: translateY(-20px) rotate(var(--rotation)); }
-        }
-      `}</style>
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
+            50% { transform: translateY(-20px) rotate(var(--rotation)); }
+          }
+        `}
+      </style>
     </section>
   );
 };
