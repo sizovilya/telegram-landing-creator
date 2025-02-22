@@ -3,39 +3,8 @@ import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
-  const gameNames = [
-    "CS2", "Dota 2", "Valorant", "Apex Legends", "PUBG", 
-    "Fortnite", "Warzone", "Rust", "League of Legends",
-    "Rainbow Six", "Overwatch", "Minecraft", "Helldivers 2"
-  ];
-
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
-      {/* Фоновые названия игр */}
-      <div className="absolute inset-0 overflow-hidden">
-        {gameNames.map((game) => {
-          const rotation = Math.random() * 360;
-          const animationDuration = Math.random() * (5 - 3) + 3; // Ускорили анимацию
-          
-          return (
-            <div
-              key={game}
-              className="absolute text-gray-300 font-bold opacity-40 select-none" // Увеличили контрастность
-              style={{
-                fontSize: `${Math.random() * (2.5 - 1.5) + 1.5}rem`, // Уменьшили размер шрифта
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                transform: `rotate(${rotation}deg)`,
-                animation: `float ${animationDuration}s infinite ease-in-out`,
-                ['--rotation' as string]: `${rotation}deg`,
-              }}
-            >
-              {game}
-            </div>
-          );
-        })}
-      </div>
-      
       {/* Декоративные элементы */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" />
@@ -92,15 +61,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-
-      <style>
-        {`
-          @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
-            50% { transform: translateY(-15px) rotate(var(--rotation)); } /* Уменьшили амплитуду движения */
-          }
-        `}
-      </style>
     </section>
   );
 };
