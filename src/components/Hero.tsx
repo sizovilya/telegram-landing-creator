@@ -1,10 +1,52 @@
-
 import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
+  const gameCovers = [
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
+  ];
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
+      {/* Анимированные обложки игр */}
+      <div className="absolute inset-0 overflow-hidden">
+        {gameCovers.map((cover, index) => {
+          const delay = Math.random() * 20; // Случайная задержка до 20 секунд
+          const duration = Math.random() * (15 - 10) + 10; // Длительность падения 10-15 секунд
+          const startPosition = Math.random() * 100; // Случайная стартовая позиция по горизонтали
+          
+          return (
+            <div
+              key={`${cover}-${index}`}
+              className="absolute"
+              style={{
+                left: `${startPosition}%`,
+                animation: `fall ${duration}s linear ${delay}s infinite`,
+                width: '100px',
+                height: '140px',
+                opacity: 0.15,
+                filter: 'blur(1px)',
+                transform: 'translateY(-140px)',
+              }}
+            >
+              <img 
+                src={cover} 
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          );
+        })}
+      </div>
+
       {/* Декоративные элементы */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" />
@@ -61,6 +103,27 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+          @keyframes fall {
+            0% {
+              transform: translateY(-140px);
+              opacity: 0;
+            }
+            10% {
+              opacity: 0.15;
+            }
+            90% {
+              opacity: 0.15;
+            }
+            100% {
+              transform: translateY(100vh);
+              opacity: 0;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
