@@ -3,10 +3,32 @@ import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
+  const gameNames = [
+    "CS2", "Dota 2", "Valorant", "Apex Legends", "PUBG", 
+    "Fortnite", "Warzone", "Rust", "League of Legends",
+    "Rainbow Six", "Overwatch", "Minecraft", "Helldivers 2"
+  ];
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-[#1A1F2C] relative overflow-hidden">
-      {/* Фоновые элементы */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80')] bg-cover bg-center opacity-10" />
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
+      {/* Фоновые названия игр */}
+      <div className="absolute inset-0 overflow-hidden">
+        {gameNames.map((game, index) => (
+          <div
+            key={game}
+            className="absolute text-gray-200 font-bold opacity-30 select-none"
+            style={{
+              fontSize: `${Math.random() * (4 - 2) + 2}rem`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+              animation: `float ${Math.random() * (8 - 5) + 5}s infinite ease-in-out`,
+            }}
+          >
+            {game}
+          </div>
+        ))}
+      </div>
       
       {/* Декоративные элементы */}
       <div className="absolute inset-0">
@@ -24,18 +46,18 @@ export const Hero = () => {
           </div>
 
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '200ms' }}>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
               Игровые друзья <br className="hidden sm:block" />
               всегда рядом
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               CS2, Dota 2, Fortnite, PUBG и другие популярные игры. 
               Находи напарников для любимых игр прямо в Telegram!
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-8 animate-fade-up shadow-lg hover:shadow-xl transition-all duration-300" style={{ animationDelay: '400ms' }}>
-            <p className="text-sm md:text-base text-gray-300">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 animate-fade-up shadow-lg hover:shadow-xl transition-all duration-300" style={{ animationDelay: '400ms' }}>
+            <p className="text-sm md:text-base text-gray-600">
               Gamepals - это Telegram бот для поиска напарников. Просто напиши боту, создай пост о поиске тиммейтов, 
               и получай уведомления когда кто-то захочет присоединиться к игре!
             </p>
@@ -54,7 +76,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white border-white/20 flex items-center gap-2" 
+              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-primary border-primary/20 flex items-center gap-2" 
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-5 w-5" />
@@ -64,6 +86,13 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
+          50% { transform: translateY(-20px) rotate(var(--rotation)); }
+        }
+      `}</style>
     </section>
   );
 };
