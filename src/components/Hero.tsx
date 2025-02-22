@@ -15,14 +15,14 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         {gameNames.map((game) => {
           const rotation = Math.random() * 360;
-          const animationDuration = Math.random() * (8 - 5) + 5;
+          const animationDuration = Math.random() * (5 - 3) + 3; // Ускорили анимацию
           
           return (
             <div
               key={game}
-              className="absolute text-gray-200 font-bold opacity-30 select-none"
+              className="absolute text-gray-300 font-bold opacity-40 select-none" // Увеличили контрастность
               style={{
-                fontSize: `${Math.random() * (4 - 2) + 2}rem`,
+                fontSize: `${Math.random() * (2.5 - 1.5) + 1.5}rem`, // Уменьшили размер шрифта
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 transform: `rotate(${rotation}deg)`,
@@ -97,7 +97,7 @@ export const Hero = () => {
         {`
           @keyframes float {
             0%, 100% { transform: translateY(0) rotate(var(--rotation)); }
-            50% { transform: translateY(-20px) rotate(var(--rotation)); }
+            50% { transform: translateY(-15px) rotate(var(--rotation)); } /* Уменьшили амплитуду движения */
           }
         `}
       </style>
