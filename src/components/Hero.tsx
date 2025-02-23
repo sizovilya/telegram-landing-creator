@@ -20,7 +20,6 @@ export const Hero = () => {
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg",
-    // Добавляем больше обложек из предоставленного списка
   ];
 
   // Создаем массив с перемешанными обложками
@@ -82,9 +81,11 @@ export const Hero = () => {
           </div>
 
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '200ms' }}>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
-              Игровые друзья <br className="hidden sm:block" />
-              всегда рядом
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+              <span className="animate-gradient-text bg-gradient-to-r from-primary via-purple-500 to-primary-hover bg-clip-text text-transparent">
+                Игровые друзья <br className="hidden sm:block" />
+                всегда рядом
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               CS2, Dota 2, Fortnite, PUBG и другие популярные игры. 
@@ -140,6 +141,23 @@ export const Hero = () => {
               transform: translateY(100vh);
               opacity: 0;
             }
+          }
+
+          @keyframes gradient-text {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+          .animate-gradient-text {
+            background-size: 200% auto;
+            animation: gradient-text 3s ease infinite;
           }
         `}
       </style>
