@@ -50,7 +50,7 @@ export const Hero = () => {
                 animation: `fall ${duration}s linear ${delay}s infinite`,
                 width: 'clamp(50px, 6vw, 80px)', // Уменьшили размер для большего количества колонок
                 height: 'clamp(70px, 8.4vw, 112px)', // Сохраняем пропорции 1:1.4
-                opacity: 0.4, // Увеличили непрозрачность
+                opacity: 0.5, // Увеличили непрозрачность до 0.5
                 filter: 'blur(1px)',
                 transform: 'translateY(-112px)',
               }}
@@ -131,10 +131,10 @@ export const Hero = () => {
               opacity: 0;
             }
             10% {
-              opacity: 0.4;
+              opacity: 0.5;
             }
             90% {
-              opacity: 0.4;
+              opacity: 0.5;
             }
             100% {
               transform: translateY(100vh);
