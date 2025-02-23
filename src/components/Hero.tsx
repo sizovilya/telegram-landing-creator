@@ -12,13 +12,22 @@ export const Hero = () => {
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg",
+    "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg",
+    // Добавляем больше обложек из предоставленного списка
   ];
 
   // Создаем массив с перемешанными обложками
   const shuffledCovers = [...gameCovers].sort(() => Math.random() - 0.5);
   
-  // Разделим экран на колонки для предотвращения пересечений
-  const columns = 6; // Уменьшили количество колонок
+  // Увеличиваем количество колонок для большего количества обложек
+  const columns = 12; // Больше колонок для лучшего распределения
   const columnWidth = 100 / columns;
 
   return (
@@ -29,7 +38,8 @@ export const Hero = () => {
           const column = index % columns;
           const delay = Math.random() * 5; // Задержка до 5 секунд
           const duration = Math.random() * (15 - 10) + 10;
-          const startPosition = column * columnWidth + Math.random() * (columnWidth * 0.8); // Случайная позиция внутри колонки
+          // Точно позиционируем каждую обложку в своей колонке
+          const startPosition = column * columnWidth + (columnWidth - 8) / 2; // Центрируем в колонке
           
           return (
             <div
@@ -38,11 +48,11 @@ export const Hero = () => {
               style={{
                 left: `${startPosition}%`,
                 animation: `fall ${duration}s linear ${delay}s infinite`,
-                width: 'clamp(60px, 8vw, 100px)', // Адаптивный размер
-                height: 'clamp(84px, 11.2vw, 140px)', // Сохраняем пропорции 1:1.4
-                opacity: 0.35, // Увеличили непрозрачность
+                width: 'clamp(50px, 6vw, 80px)', // Уменьшили размер для большего количества колонок
+                height: 'clamp(70px, 8.4vw, 112px)', // Сохраняем пропорции 1:1.4
+                opacity: 0.4, // Увеличили непрозрачность
                 filter: 'blur(1px)',
-                transform: 'translateY(-140px)',
+                transform: 'translateY(-112px)',
               }}
             >
               <img 
@@ -117,14 +127,14 @@ export const Hero = () => {
         {`
           @keyframes fall {
             0% {
-              transform: translateY(-140px);
+              transform: translateY(-112px);
               opacity: 0;
             }
             10% {
-              opacity: 0.35;
+              opacity: 0.4;
             }
             90% {
-              opacity: 0.35;
+              opacity: 0.4;
             }
             100% {
               transform: translateY(100vh);
