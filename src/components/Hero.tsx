@@ -1,3 +1,4 @@
+
 import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -13,14 +14,22 @@ export const Hero = () => {
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
   ];
 
+  // Создаем несколько копий массива для большего количества картинок
+  const extendedGameCovers = [...gameCovers, ...gameCovers, ...gameCovers];
+
+  // Разделим экран на колонки для предотвращения пересечений
+  const columns = 8; // Количество колонок
+  const columnWidth = 100 / columns;
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
       {/* Анимированные обложки игр */}
       <div className="absolute inset-0 overflow-hidden">
-        {gameCovers.map((cover, index) => {
-          const delay = Math.random() * 20; // Случайная задержка до 20 секунд
-          const duration = Math.random() * (15 - 10) + 10; // Длительность падения 10-15 секунд
-          const startPosition = Math.random() * 100; // Случайная стартовая позиция по горизонтали
+        {extendedGameCovers.map((cover, index) => {
+          const column = index % columns;
+          const delay = Math.random() * 5; // Уменьшили задержку для большего количества картинок в начале
+          const duration = Math.random() * (15 - 10) + 10;
+          const startPosition = column * columnWidth + Math.random() * (columnWidth * 0.8); // Случайная позиция внутри колонки
           
           return (
             <div
@@ -29,9 +38,9 @@ export const Hero = () => {
               style={{
                 left: `${startPosition}%`,
                 animation: `fall ${duration}s linear ${delay}s infinite`,
-                width: '100px',
-                height: '140px',
-                opacity: 0.15,
+                width: 'clamp(60px, 8vw, 100px)', // Адаптивный размер
+                height: 'clamp(84px, 11.2vw, 140px)', // Сохраняем пропорции 1:1.4
+                opacity: 0.25, // Увеличили непрозрачность
                 filter: 'blur(1px)',
                 transform: 'translateY(-140px)',
               }}
@@ -112,10 +121,10 @@ export const Hero = () => {
               opacity: 0;
             }
             10% {
-              opacity: 0.15;
+              opacity: 0.25;
             }
             90% {
-              opacity: 0.15;
+              opacity: 0.25;
             }
             100% {
               transform: translateY(100vh);
