@@ -26,7 +26,7 @@ export const Hero = () => {
   const shuffledCovers = [...gameCovers].sort(() => Math.random() - 0.5);
   
   // Увеличиваем количество колонок для большего количества обложек
-  const columns = 12; // Больше колонок для лучшего распределения
+  const columns = 12;
   const columnWidth = 100 / columns;
 
   return (
@@ -113,7 +113,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 border-primary/20 flex items-center gap-2 text-white bg-primary hover:text-white" 
+              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-primary border-primary/20 flex items-center gap-2" 
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-5 w-5" />

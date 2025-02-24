@@ -37,7 +37,7 @@ export const Navbar = () => {
             </Button>
             <Button 
               size="sm"
-              className="bg-gradient-to-r from-primary to-primary-hover hover:opacity-90"
+              className="bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 text-white"
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
               Открыть бота
