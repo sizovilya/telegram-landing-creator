@@ -103,7 +103,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: '600ms' }}>
             <Button 
               size="lg" 
-              className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300 flex items-center gap-2" 
+              className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-white" 
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
               <Send className="h-5 w-5" />
@@ -113,7 +113,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-primary border-primary/20 flex items-center gap-2" 
+              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 border-primary/20 flex items-center gap-2 text-white bg-primary hover:text-white" 
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-5 w-5" />
