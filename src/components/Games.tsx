@@ -165,12 +165,13 @@ export const Games = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {gameCovers.map((cover, index) => (
-                <CarouselItem key={cover} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={cover} className="pl-2 md:pl-4 basis-full md:basis-1/3 lg:basis-1/4">
                   <div 
                     className={cn(
-                      "group h-44 md:h-52 rounded-2xl p-6 flex flex-col justify-end overflow-hidden relative",
+                      "group rounded-lg overflow-hidden relative",
                       "transition-all duration-300 transform hover:-translate-y-1",
-                      "animate-fade-up"
+                      "animate-fade-up",
+                      "aspect-[3/4]" // Устанавливаем соотношение сторон 3:4
                     )}
                     style={{ 
                       animationDelay: `${index * 100}ms`,
@@ -179,10 +180,10 @@ export const Games = () => {
                     <img 
                       src={cover}
                       alt=""
-                      className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/70 transition-all duration-300" />
-                    <div className="relative z-10">
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
                       <p className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         Нажми чтобы найти напарников
                       </p>
