@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -29,9 +28,7 @@ const gameCovers = [
   "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg",
   "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg",
   "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
-  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg",
-  "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg",
-];
+].slice(0, window.innerWidth < 768 ? 12 : 14);
 
 const gameCategories: GameCategory[] = [
   {
@@ -171,7 +168,7 @@ export const Games = () => {
                       "group rounded-lg overflow-hidden relative",
                       "transition-all duration-300 transform hover:-translate-y-1",
                       "animate-fade-up",
-                      "aspect-[3/4]" // Устанавливаем соотношение сторон 3:4
+                      "aspect-[3/4]"
                     )}
                     style={{ 
                       animationDelay: `${index * 100}ms`,
@@ -192,8 +189,8 @@ export const Games = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white/80 hover:bg-white" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white/80 hover:bg-white" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </div>
