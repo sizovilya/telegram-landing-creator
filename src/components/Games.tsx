@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +13,25 @@ type GameCategory = {
   name: string;
   games: string[];
 };
+
+const gameCovers = [
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg",
+  "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg",
+];
 
 const gameCategories: GameCategory[] = [
   {
@@ -110,8 +130,6 @@ const gameCategories: GameCategory[] = [
   }
 ];
 
-const allGames = gameCategories.flatMap(category => category.games);
-
 export const Games = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white to-secondary">
@@ -146,26 +164,25 @@ export const Games = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {allGames.map((game, index) => (
-                <CarouselItem key={game} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+              {gameCovers.map((cover, index) => (
+                <CarouselItem key={cover} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div 
                     className={cn(
-                      "group h-44 md:h-52 rounded-2xl p-6 flex flex-col justify-end overflow-hidden relative bg-gradient-to-br",
-                      "from-primary/80 to-primary-hover/80",
-                      "hover:from-primary hover:to-primary-hover",
+                      "group h-44 md:h-52 rounded-2xl p-6 flex flex-col justify-end overflow-hidden relative",
                       "transition-all duration-300 transform hover:-translate-y-1",
                       "animate-fade-up"
                     )}
                     style={{ 
                       animationDelay: `${index * 100}ms`,
-                      backgroundImage: `url(/placeholder.svg)`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center'
                     }}
                   >
+                    <img 
+                      src={cover}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/70 transition-all duration-300" />
                     <div className="relative z-10">
-                      <h3 className="text-lg font-semibold text-white mb-1">{game}</h3>
                       <p className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         Нажми чтобы найти напарников
                       </p>
