@@ -13,6 +13,28 @@
     "openBotButton": "Open Bot in Telegram",
     "channelButton": "Gaming Channel"
   },
+  "features": {
+    "title": "Made for Gamers",
+    "subtitle": "Gamepals is a Telegram bot that helps you find perfect teammates for your favorite games",
+    "items": {
+      "anyGames": {
+        "title": "Any Games",
+        "description": "CS2, Dota 2, Fortnite, PUBG and many others. Find partners for any game"
+      },
+      "telegramBot": {
+        "title": "Simple Telegram Bot",
+        "description": "Create a post through the bot and receive notifications about new partners right in Telegram"
+      },
+      "community": {
+        "title": "Active Community",
+        "description": "Thousands of gamers have already found their perfect teammates through Gamepals in Telegram"
+      },
+      "notifications": {
+        "title": "Smart Notifications",
+        "description": "The bot monitors new responses and instantly notifies you about potential partners"
+      }
+    }
+  },
   "cta": {
     "title": "Ready to find your Gamepals?",
     "subtitle": "Join thousands of players who have already found friends for gaming together",

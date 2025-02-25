@@ -1,30 +1,29 @@
 
 import { MessageSquare, Users, Gamepad, Bell } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const features = [
   {
     icon: Gamepad,
-    title: "Любые игры",
-    description: "CS2, Dota 2, Fortnite, PUBG и многие другие. Находи напарников для любой игры"
+    translationKey: "anyGames"
   },
   {
     icon: MessageSquare,
-    title: "Простой Telegram бот",
-    description: "Создавай пост через бота и получай уведомления о новых напарниках прямо в Telegram"
+    translationKey: "telegramBot"
   },
   {
     icon: Users,
-    title: "Активное комьюнити",
-    description: "Тысячи геймеров уже нашли своих идеальных тиммейтов через Gamepals в Telegram"
+    translationKey: "community"
   },
   {
     icon: Bell,
-    title: "Умные уведомления",
-    description: "Бот следит за новыми откликами и сразу сообщает о потенциальных напарниках"
+    translationKey: "notifications"
   }
 ];
 
 export const Features = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white to-secondary">
       <div className="absolute inset-0">
@@ -35,10 +34,10 @@ export const Features = () => {
       <div className="container px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-hover">
-            Создан для геймеров
+            {t('features.title')}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Gamepals - Telegram бот, который помогает найти идеальных напарников для твоих любимых игр
+            {t('features.subtitle')}
           </p>
         </div>
         
@@ -52,8 +51,12 @@ export const Features = () => {
               <div className="bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl p-3 inline-block mb-4">
                 <feature.icon className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2">
+                {t(`features.items.${feature.translationKey}.title`)}
+              </h3>
+              <p className="text-muted-foreground">
+                {t(`features.items.${feature.translationKey}.description`)}
+              </p>
             </div>
           ))}
         </div>
