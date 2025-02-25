@@ -18,7 +18,7 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
       {/* Фоновые обложки игр */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 grid grid-cols-4 gap-4 p-8 opacity-10">
+        <div className="absolute inset-0 grid grid-cols-4 gap-4 p-8 opacity-20">
           {gameCovers.map((cover, index) => (
             <div
               key={`${cover}-${index}`}
@@ -54,16 +54,18 @@ export const Hero = () => {
           </div>
 
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '200ms' }}>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <span className="animate-gradient-text bg-gradient-to-r from-primary via-purple-500 to-primary-hover bg-clip-text text-transparent">
-                Игровые друзья <br className="hidden sm:block" />
-                всегда рядом
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              CS2, Dota 2, Fortnite, PUBG и другие популярные игры. 
-              Находи напарников для любимых игр прямо в Telegram!
-            </p>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+                <span className="animate-gradient-text bg-gradient-to-r from-primary via-purple-500 to-primary-hover bg-clip-text text-transparent">
+                  Игровые друзья <br className="hidden sm:block" />
+                  всегда рядом
+                </span>
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                CS2, Dota 2, Fortnite, PUBG и другие популярные игры. 
+                Находи напарников для любимых игр прямо в Telegram!
+              </p>
+            </div>
           </div>
 
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 animate-fade-up shadow-lg hover:shadow-xl transition-all duration-300" style={{ animationDelay: '400ms' }}>
