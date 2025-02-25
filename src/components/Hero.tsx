@@ -1,8 +1,11 @@
 
 import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
+  
   const gameCovers = [
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg",
@@ -57,21 +60,18 @@ export const Hero = () => {
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
                 <span className="animate-gradient-text bg-gradient-to-r from-primary via-purple-500 to-primary-hover bg-clip-text text-transparent">
-                  Игровые друзья <br className="hidden sm:block" />
-                  всегда рядом
+                  {t('hero.title')}
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                CS2, Dota 2, Fortnite, PUBG и другие популярные игры. 
-                Находи напарников для любимых игр прямо в Telegram!
+                {t('hero.subtitle')}
               </p>
             </div>
           </div>
 
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 animate-fade-up shadow-lg hover:shadow-xl transition-all duration-300" style={{ animationDelay: '400ms' }}>
             <p className="text-sm md:text-base text-gray-600">
-              Gamepals - это Telegram бот для поиска напарников. Просто напиши боту, создай пост о поиске тиммейтов, 
-              и получай уведомления когда кто-то захочет присоединиться к игре!
+              {t('hero.description')}
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export const Hero = () => {
               onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
             >
               <Send className="h-5 w-5" />
-              Открыть бота в Telegram
+              {t('hero.openBotButton')}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -92,7 +92,7 @@ export const Hero = () => {
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-5 w-5" />
-              Игровой канал
+              {t('hero.channelButton')}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
