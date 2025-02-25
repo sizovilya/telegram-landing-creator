@@ -12,57 +12,30 @@ export const Hero = () => {
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg",
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg",
-    "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg",
   ];
-
-  // Создаем массив с перемешанными обложками
-  const shuffledCovers = [...gameCovers].sort(() => Math.random() - 0.5);
-  
-  // Увеличиваем количество колонок для большего количества обложек
-  const columns = 12;
-  const columnWidth = 100 / columns;
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
-      {/* Анимированные обложки игр */}
+      {/* Фоновые обложки игр */}
       <div className="absolute inset-0 overflow-hidden">
-        {shuffledCovers.map((cover, index) => {
-          const column = index % columns;
-          const delay = Math.random() * 5; // Задержка до 5 секунд
-          const duration = Math.random() * (15 - 10) + 10;
-          // Точно позиционируем каждую обложку в своей колонке
-          const startPosition = column * columnWidth + (columnWidth - 8) / 2; // Центрируем в колонке
-          
-          return (
+        <div className="absolute inset-0 grid grid-cols-4 gap-4 p-8 opacity-10">
+          {gameCovers.map((cover, index) => (
             <div
               key={`${cover}-${index}`}
-              className="absolute"
+              className="relative aspect-[3/4] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
               style={{
-                left: `${startPosition}%`,
-                animation: `fall ${duration}s linear ${delay}s infinite`,
-                width: 'clamp(50px, 6vw, 80px)', // Уменьшили размер для большего количества колонок
-                height: 'clamp(70px, 8.4vw, 112px)', // Сохраняем пропорции 1:1.4
-                opacity: 0.5, // Увеличили непрозрачность до 0.5
-                filter: 'blur(1px)',
-                transform: 'translateY(-112px)',
+                animationDelay: `${index * 150}ms`,
               }}
             >
               <img 
                 src={cover} 
                 alt=""
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
 
       {/* Декоративные элементы */}
@@ -126,23 +99,6 @@ export const Hero = () => {
 
       <style>
         {`
-          @keyframes fall {
-            0% {
-              transform: translateY(-112px);
-              opacity: 0;
-            }
-            10% {
-              opacity: 0.5;
-            }
-            90% {
-              opacity: 0.5;
-            }
-            100% {
-              transform: translateY(100vh);
-              opacity: 0;
-            }
-          }
-
           @keyframes gradient-text {
             0% {
               background-position: 0% 50%;
