@@ -12,5 +12,11 @@
     "description": "Gamepals is a Telegram bot for finding gaming partners. Simply message the bot, create a post about looking for teammates, and receive notifications when someone wants to join your game!",
     "openBotButton": "Open Bot in Telegram",
     "channelButton": "Gaming Channel"
+  },
+  "cta": {
+    "title": "Ready to find your Gamepals?",
+    "subtitle": "Join thousands of players who have already found friends for gaming together",
+    "findPartners": "Find Partners",
+    "support": "Support"
   }
 }

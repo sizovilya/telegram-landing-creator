@@ -1,4 +1,3 @@
-
 import { ArrowRight, Send, GamepadIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
@@ -19,7 +18,6 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
-      {/* Фоновые обложки игр */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-4 gap-4 p-8 opacity-20">
           {gameCovers.map((cover, index) => (
@@ -41,7 +39,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Декоративные элементы */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#E5DEFF]/30 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" />
@@ -86,9 +83,8 @@ export const Hero = () => {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
-              size="lg" 
-              variant="outline" 
-              className="group bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-primary border-primary/20 flex items-center gap-2" 
+              size="lg"  
+              className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-white" 
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-5 w-5" />
