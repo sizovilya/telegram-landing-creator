@@ -33,9 +33,8 @@ export const Navbar = () => {
           <div className="flex items-center gap-4">
             <LanguageSwitch />
             <Button 
-              variant="secondary"
               size="sm"
-              className="hidden md:flex group bg-white text-primary hover:bg-white/90 items-center gap-2"
+              className="hidden md:flex group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 text-white items-center gap-2"
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-4 w-4" />
