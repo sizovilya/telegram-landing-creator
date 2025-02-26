@@ -30,12 +30,13 @@ export const CTA = () => {
             </Button>
             <Button
               size="lg"
-              className="group bg-white/20 hover:bg-white/30 text-white border-0 flex items-center gap-2"
-              onClick={() => window.open("https://t.me/support_chat", "_blank")}
+              variant="secondary"
+              className="group bg-white text-primary hover:bg-white/90 flex items-center gap-2"
+              onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
               <Send className="h-5 w-5" />
-              {t('cta.support', 'Техподдержка')}
-              <MessageSquare className="h-4 w-4" />
+              {t('cta.channel', 'Игровой канал')}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
         </div>
