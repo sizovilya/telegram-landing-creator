@@ -1,4 +1,5 @@
-import { ArrowRight, Send, GamepadIcon } from "lucide-react";
+
+import { ArrowRight, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
 
@@ -47,8 +48,7 @@ export const Hero = () => {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <div className="space-y-8">
           <div className="flex items-center justify-center gap-3 mb-8 animate-fade-up">
-            <GamepadIcon className="h-8 w-8 text-primary" />
-            <span className="inline-block px-6 py-2 text-xl font-bold rounded-full bg-gradient-to-r from-primary/10 to-primary-hover/10 text-primary backdrop-blur-sm hover:scale-105 transition-all duration-300 cursor-pointer">
+            <span className="inline-block px-8 py-3 text-2xl font-bold rounded-full bg-gradient-to-r from-primary to-primary-hover text-white shadow-lg hover:shadow-xl backdrop-blur-sm hover:scale-105 transition-all duration-300 cursor-pointer">
               Gamepals
             </span>
           </div>
