@@ -1,6 +1,6 @@
 
 import { Button } from "./ui/button";
-import { GamepadIcon } from "lucide-react";
+import { GamepadIcon, ArrowRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitch } from "./LanguageSwitch";
@@ -33,12 +33,14 @@ export const Navbar = () => {
           <div className="flex items-center gap-4">
             <LanguageSwitch />
             <Button 
-              variant="outline"
+              variant="secondary"
               size="sm"
-              className="hidden md:flex"
+              className="hidden md:flex group bg-white text-primary hover:bg-white/90 items-center gap-2"
               onClick={() => window.open("https://t.me/your_channel", "_blank")}
             >
+              <Send className="h-4 w-4" />
               {t('nav.channel')}
+              <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
               size="sm"
