@@ -14,7 +14,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2 group">
-              <GamepadIcon className="h-6 w-6 text-primary group-hover:text-primary-hover transition-colors" />
+              <GamepadIcon className="h-6 w-6 text-primary group-hover:text-primary-hover transition-colors animate-bounce" />
               <span className="text-xl font-semibold text-primary group-hover:text-primary-hover transition-colors">
                 Gamepals
               </span>
