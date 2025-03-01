@@ -1,36 +1,22 @@
 
-const testimonials = [
-  {
-    name: "Александр",
-    role: "CS2 игрок",
-    content: "Нашел постоянную команду для ММ в CS2 за один день. Теперь играем вместе каждый вечер!"
-  },
-  {
-    name: "Елена",
-    role: "Dota 2 игрок",
-    content: "Удобно искать команду для ranked игр. Можно указать свой ранг и роль, чтобы найти подходящих тиммейтов."
-  },
-  {
-    name: "Дмитрий",
-    role: "Fortnite игрок",
-    content: "Больше не нужно играть с рандомами. За пару минут нахожу напарников нужного уровня для совместной игры."
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const Testimonials = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20">
       <div className="container px-4">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Отзывы пользователей
+            {t('testimonials.title')}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Узнайте, что говорят о нас те, кто уже использует наше приложение
+            {t('testimonials.subtitle')}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {t('testimonials.items', { returnObjects: true }).map((testimonial, index) => (
             <div
               key={index}
               className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-up"
