@@ -37,7 +37,8 @@
   },
   "games": {
     "title": "Find Partners for Any Game",
-    "subtitle": "We support all popular multiplayer games"
+    "subtitle": "We support all popular multiplayer games",
+    "hoverText": "Click to find teammates"
   },
   "testimonials": {
     "title": "User Testimonials",
