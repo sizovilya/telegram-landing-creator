@@ -35,6 +35,10 @@
       }
     }
   },
+  "games": {
+    "title": "Find Partners for Any Game",
+    "subtitle": "We support all popular multiplayer games"
+  },
   "testimonials": {
     "title": "User Testimonials",
     "subtitle": "Find out what people who already use our app are saying",

@@ -4,6 +4,13 @@ import { useTranslation } from "react-i18next";
 export const Testimonials = () => {
   const { t } = useTranslation();
   
+  // Get the testimonials items and cast to array to fix type error
+  const testimonials = t('testimonials.items', { returnObjects: true }) as Array<{
+    name: string;
+    role: string;
+    content: string;
+  }>;
+  
   return (
     <section className="py-20">
       <div className="container px-4">
@@ -16,7 +23,7 @@ export const Testimonials = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {t('testimonials.items', { returnObjects: true }).map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-up"

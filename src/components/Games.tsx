@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import Autoplay from 'embla-carousel-autoplay';
+import { useTranslation } from "react-i18next";
 
 type GameCategory = {
   name: string;
@@ -128,6 +130,8 @@ const gameCategories: GameCategory[] = [
 ];
 
 export const Games = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white to-secondary">
       <div className="absolute inset-0">
@@ -138,10 +142,10 @@ export const Games = () => {
       <div className="container px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-hover">
-            Найди напарников для любой игры
+            {t('games.title')}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Поддерживаем все популярные многопользовательские игры
+            {t('games.subtitle')}
           </p>
         </div>
 
