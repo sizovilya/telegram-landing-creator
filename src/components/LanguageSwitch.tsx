@@ -16,11 +16,11 @@ export const LanguageSwitch = () => {
     i18n.changeLanguage(lang);
   };
 
-  // Map language codes to display names and flag emojis
+  // Map language codes to display names and flag icons
   const languageOptions: Record<string, { name: string; flag: string }> = {
-    en: { name: "English", flag: "🇬🇧" },
-    ru: { name: "Русский", flag: "🇷🇺" },
-    sv: { name: "Svenska", flag: "🇸🇪" },
+    en: { name: "English", flag: "EN" },
+    ru: { name: "Русский", flag: "RU" },
+    sv: { name: "Svenska", flag: "SE" },
   };
 
   // Get current language display name and flag
@@ -34,7 +34,10 @@ export const LanguageSwitch = () => {
           size="sm"
           className="font-medium flex items-center gap-1"
         >
-          {currentLanguage.flag} {currentLanguage.name}
+          <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-semibold bg-slate-100 text-slate-700 rounded">
+            {currentLanguage.flag}
+          </span>
+          {currentLanguage.name}
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
@@ -47,7 +50,12 @@ export const LanguageSwitch = () => {
               i18n.language === code ? "font-semibold text-primary" : "text-slate-700"
             } cursor-pointer`}
           >
-            {flag} {name}
+            <span className={`inline-flex items-center justify-center w-6 h-6 text-xs font-semibold ${
+              i18n.language === code ? "bg-primary/10 text-primary" : "bg-slate-100 text-slate-700"
+            } rounded mr-2`}>
+              {flag}
+            </span>
+            {name}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
