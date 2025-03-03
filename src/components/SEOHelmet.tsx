@@ -17,13 +17,20 @@ export const SEOHelmet = ({
 }: SEOProps) => {
   const { t, i18n } = useTranslation();
   
-  const defaultTitle = i18n.language === 'en' 
-    ? 'Gamepals - Gaming Friends Always Nearby' 
-    : 'Gamepals - Найди напарника для любимой игры';
+  // Define default titles and descriptions based on language
+  let defaultTitle = defaultTitle = 'Gamepals';
+  let defaultDescription = 'Gamepals - A service for finding gaming partners in Telegram';
   
-  const defaultDescription = i18n.language === 'en'
-    ? 'Gamepals - A service for finding gaming partners in Telegram. CS2, Dota 2, Fortnite, PUBG and other games.'
-    : 'Gamepals - сервис поиска напарников для онлайн игр в Telegram. CS2, Dota 2, Fortnite, PUBG и другие игры.';
+  if (i18n.language === 'en') {
+    defaultTitle = 'Gamepals - Gaming Friends Always Nearby';
+    defaultDescription = 'Gamepals - A service for finding gaming partners in Telegram. CS2, Dota 2, Fortnite, PUBG and other games.';
+  } else if (i18n.language === 'ru') {
+    defaultTitle = 'Gamepals - Найди напарника для любимой игры';
+    defaultDescription = 'Gamepals - сервис поиска напарников для онлайн игр в Telegram. CS2, Dota 2, Fortnite, PUBG и другие игры.';
+  } else if (i18n.language === 'sv') {
+    defaultTitle = 'Gamepals - Spelkompisar alltid nära';
+    defaultDescription = 'Gamepals - en tjänst för att hitta spelpartners i Telegram. CS2, Dota 2, Fortnite, PUBG och andra spel.';
+  }
 
   return (
     <Helmet>

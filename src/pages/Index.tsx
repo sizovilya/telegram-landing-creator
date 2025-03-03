@@ -12,13 +12,19 @@ const Index = () => {
   const { t, i18n } = useTranslation();
   
   // Define language-specific SEO content for the home page
-  const pageTitle = i18n.language === 'en' 
-    ? 'Gamepals - Gaming Friends Always Nearby' 
-    : 'Gamepals - Найди напарника для любимой игры';
-    
-  const pageDescription = i18n.language === 'en'
-    ? 'Find gaming partners for CS2, Dota 2, Fortnite, PUBG and other popular games right in Telegram!'
-    : 'Найди напарников для CS2, Dota 2, Fortnite, PUBG и других популярных игр прямо в Telegram!';
+  let pageTitle = 'Gamepals';
+  let pageDescription = 'Find gaming partners in Telegram';
+  
+  if (i18n.language === 'en') {
+    pageTitle = 'Gamepals - Gaming Friends Always Nearby';
+    pageDescription = 'Find gaming partners for CS2, Dota 2, Fortnite, PUBG and other popular games right in Telegram!';
+  } else if (i18n.language === 'ru') {
+    pageTitle = 'Gamepals - Найди напарника для любимой игры';
+    pageDescription = 'Найди напарников для CS2, Dota 2, Fortnite, PUBG и других популярных игр прямо в Telegram!';
+  } else if (i18n.language === 'sv') {
+    pageTitle = 'Gamepals - Spelkompisar alltid nära';
+    pageDescription = 'Hitta spelpartners för CS2, Dota 2, Fortnite, PUBG och andra populära spel direkt i Telegram!';
+  }
 
   return (
     <div className="min-h-screen bg-white">
