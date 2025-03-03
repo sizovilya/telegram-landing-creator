@@ -18,7 +18,7 @@ export const SEOHelmet = ({
   const { t, i18n } = useTranslation();
   
   // Define default titles and descriptions based on language
-  let defaultTitle = defaultTitle = 'Gamepals';
+  let defaultTitle = 'Gamepals';
   let defaultDescription = 'Gamepals - A service for finding gaming partners in Telegram';
   
   if (i18n.language === 'en') {
