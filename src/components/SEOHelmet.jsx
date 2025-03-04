@@ -2,19 +2,12 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-}
-
 export const SEOHelmet = ({
   title,
   description,
   canonicalUrl = 'https://gamepals.app',
   ogImage = '/og-image.png',
-}: SEOProps) => {
+}) => {
   const { t, i18n } = useTranslation();
   
   // Define default titles and descriptions based on language

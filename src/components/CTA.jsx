@@ -1,7 +1,7 @@
 
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
-import { ArrowRight, MessageSquare, Send } from "lucide-react";
+import { ArrowRight, Send } from "lucide-react";
 
 export const CTA = () => {
   const { t } = useTranslation();

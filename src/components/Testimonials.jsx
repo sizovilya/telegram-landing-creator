@@ -4,12 +4,8 @@ import { useTranslation } from "react-i18next";
 export const Testimonials = () => {
   const { t } = useTranslation();
   
-  // Get the testimonials items and cast to array to fix type error
-  const testimonials = t('testimonials.items', { returnObjects: true }) as Array<{
-    name: string;
-    role: string;
-    content: string;
-  }>;
+  // Get the testimonials items and cast to array
+  const testimonials = t('testimonials.items', { returnObjects: true });
   
   return (
     <section className="py-20">

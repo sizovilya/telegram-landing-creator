@@ -12,12 +12,12 @@ import { Button } from "./ui/button";
 export const LanguageSwitch = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
 
   // Map language codes to display names
-  const languageOptions: Record<string, string> = {
+  const languageOptions = {
     en: "English",
     ru: "Русский",
     sv: "Svenska",

@@ -10,11 +10,6 @@ import { cn } from "@/lib/utils";
 import Autoplay from 'embla-carousel-autoplay';
 import { useTranslation } from "react-i18next";
 
-type GameCategory = {
-  name: string;
-  games: string[];
-};
-
 const gameCovers = [
   "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg",
   "https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg",
@@ -32,7 +27,7 @@ const gameCovers = [
   "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
 ].slice(0, window.innerWidth < 768 ? 12 : 14);
 
-const gameCategories: GameCategory[] = [
+const gameCategories = [
   {
     name: "Шутеры",
     games: [
