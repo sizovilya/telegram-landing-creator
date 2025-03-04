@@ -6,11 +6,13 @@ import Blog from "./pages/Blog";
 import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 import "./i18n/config"; // Import i18next configuration
+import { Toaster } from "./components/ui/sonner";
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
+        <Toaster position="top-right" />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />

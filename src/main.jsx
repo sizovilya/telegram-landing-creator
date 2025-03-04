@@ -6,10 +6,13 @@ import './index.css'
 const rootElement = document.getElementById("root");
 
 if (rootElement) {
-  // Check if the app was server-rendered
-  if (rootElement.hasChildNodes()) {
-    hydrateRoot(rootElement, <App />);
-  } else {
-    createRoot(rootElement).render(<App />);
+  // Удаляем любые уже существующие дочерние элементы
+  // Это может помочь предотвратить проблемы с гидрацией
+  while (rootElement.firstChild) {
+    rootElement.removeChild(rootElement.firstChild);
   }
+  
+  // Создаем новый корневой элемент и рендерим приложение
+  const root = createRoot(rootElement);
+  root.render(<App />);
 }

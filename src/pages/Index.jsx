@@ -27,18 +27,20 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full">
       <SEOHelmet 
         title={pageTitle}
         description={pageDescription}
         canonicalUrl="https://gamepals.app" 
       />
       <Navbar />
-      <Hero />
-      <Features />
-      <Games />
-      <Testimonials />
-      <CTA />
+      <main>
+        <Hero />
+        <Features />
+        <Games />
+        <Testimonials />
+        <CTA />
+      </main>
     </div>
   );
 };

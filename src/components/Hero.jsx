@@ -17,10 +17,15 @@ export const Hero = () => {
     "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
   ];
 
+  // Функция для открытия внешних ссылок
+  const openExternalLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 grid grid-cols-4 gap-4 p-8 opacity-20">
+    <section className="min-h-[calc(100vh-64px)] flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-100 relative overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute inset-0 grid grid-cols-4 gap-4 p-8">
           {gameCovers.map((cover, index) => (
             <div
               key={`${cover}-${index}`}
@@ -76,7 +81,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-white" 
-              onClick={() => window.open("https://t.me/your_bot_username", "_blank")}
+              onClick={() => openExternalLink("https://t.me/your_bot_username")}
             >
               <Send className="h-5 w-5" />
               {t('hero.openBotButton')}
@@ -85,7 +90,7 @@ export const Hero = () => {
             <Button 
               size="lg"  
               className="group bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-white" 
-              onClick={() => window.open("https://t.me/your_channel", "_blank")}
+              onClick={() => openExternalLink("https://t.me/your_channel")}
             >
               <Send className="h-5 w-5" />
               {t('hero.channelButton')}
