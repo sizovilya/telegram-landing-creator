@@ -1,6 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from 'react-helmet-async';
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import Posts from "./pages/Posts";
@@ -10,17 +9,15 @@ import { Toaster } from "./components/ui/sonner";
 
 function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <Toaster position="top-right" />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/posts" element={<Posts />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </HelmetProvider>
+    <>
+      <Toaster position="top-right" />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 
