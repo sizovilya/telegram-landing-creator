@@ -11,7 +11,7 @@ function App() {
       <nav className="navbar">
         <div className="container navbar-container">
           <a href="#" className="navbar-logo">
-            <GamepadIcon className="w-6 h-6" />
+            <GamepadIcon className="w-6 h-6 text-primary-DEFAULT" />
             <span className="text-xl font-semibold">Gamepals</span>
           </a>
           
@@ -25,7 +25,7 @@ function App() {
               href="https://t.me/your_channel" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn btn-sm btn-primary hidden md:flex items-center gap-2"
+              className="btn btn-sm btn-primary hidden md:flex items-center gap-2 animate-fade-in"
             >
               <Send className="w-4 h-4" />
               Channel
@@ -47,7 +47,7 @@ function App() {
       <section className="hero">
         <div className="container">
           <div className="hero-grid">
-            <div className="hero-content">
+            <div className="hero-content animate-fade-up">
               <h1 className="hero-title">Gaming Friends Always Nearby</h1>
               <h2 className="hero-subtitle">CS2, Dota 2, Fortnite, PUBG and other popular games. Find teammates for your favorite games right in Telegram!</h2>
               <p className="hero-description">
@@ -72,7 +72,7 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="hero-image">
+            <div className="hero-image animate-fade-in">
               <img src="https://placehold.co/600x400" alt="Gamepals preview" />
             </div>
           </div>
@@ -86,7 +86,7 @@ function App() {
           <p className="section-subtitle">Gamepals is a Telegram bot that helps you find perfect teammates for your favorite games</p>
           
           <div className="features-grid">
-            <div className="feature-card">
+            <div className="feature-card hover-scale">
               <div className="feature-icon">
                 <Gamepad className="w-5 h-5" />
               </div>
@@ -94,7 +94,7 @@ function App() {
               <p className="feature-description">CS2, Dota 2, Fortnite, PUBG and many others. Find partners for any game</p>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card hover-scale">
               <div className="feature-icon">
                 <Send className="w-5 h-5" />
               </div>
@@ -102,7 +102,7 @@ function App() {
               <p className="feature-description">Create a post through the bot and receive notifications about new partners right in Telegram</p>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card hover-scale">
               <div className="feature-icon">
                 <Users className="w-5 h-5" />
               </div>
@@ -110,7 +110,7 @@ function App() {
               <p className="feature-description">Thousands of gamers have already found their perfect teammates through Gamepals in Telegram</p>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card hover-scale">
               <div className="feature-icon">
                 <Bell className="w-5 h-5" />
               </div>
@@ -150,7 +150,7 @@ function App() {
           <p className="section-subtitle">Find out what people who already use our app are saying</p>
           
           <div className="testimonials-grid">
-            <div className="testimonial-card">
+            <div className="testimonial-card hover-scale">
               <p className="testimonial-content">Found a permanent team for MM in CS2 in just one day. Now we play together every evening!</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">A</div>
@@ -161,7 +161,7 @@ function App() {
               </div>
             </div>
             
-            <div className="testimonial-card">
+            <div className="testimonial-card hover-scale">
               <p className="testimonial-content">Convenient for finding a team for ranked games. You can specify your rank and role to find suitable teammates.</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">E</div>
@@ -172,7 +172,7 @@ function App() {
               </div>
             </div>
             
-            <div className="testimonial-card">
+            <div className="testimonial-card hover-scale">
               <p className="testimonial-content">No more playing with randoms. Within a few minutes I find partners of the right level for cooperative gameplay.</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">D</div>
@@ -189,7 +189,7 @@ function App() {
       {/* CTA Section */}
       <section className="cta">
         <div className="container">
-          <div className="cta-content">
+          <div className="cta-content animate-fade-up">
             <h2 className="section-title">Ready to find your Gamepals?</h2>
             <p className="section-subtitle">Join thousands of players who have already found friends for gaming together</p>
             
@@ -220,7 +220,7 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-logo">
-              <GamepadIcon className="w-5 h-5" />
+              <GamepadIcon className="w-5 h-5 text-primary-DEFAULT" />
               <span className="font-semibold">Gamepals</span>
             </div>
             
