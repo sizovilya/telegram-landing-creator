@@ -22,23 +22,11 @@ export default defineConfig(({ mode }) => ({
   },
   // Конфигурация для SSR
   build: {
-    ssr: true,
     outDir: mode === 'production' ? 'dist/client' : 'dist',
     rollupOptions: {
-      input: mode === 'production' 
-        ? {
-            app: path.resolve(__dirname, 'index.html'),
-            client: path.resolve(__dirname, 'src/entry-client.jsx')
-          }
-        : {
-            app: path.resolve(__dirname, 'index.html'),
-          },
-      output: {
-        // Для того, чтобы избежать проблем с именованием файлов
-        entryFileNames: '[name].[hash].js',
-        chunkFileNames: '[name].[hash].js',
-        assetFileNames: '[name].[hash].[ext]'
-      }
+      input: {
+        app: path.resolve(__dirname, 'index.html'),
+      },
     },
   },
 }));
