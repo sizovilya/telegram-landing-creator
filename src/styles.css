@@ -1,3 +1,4 @@
+
 /* Base styles */
 @tailwind base;
 @tailwind components;
@@ -238,20 +239,28 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg'),
-              url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg');
-  background-size: cover;
+  background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7u0c.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co48rz.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg'),
+                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg');
+  background-size: 20% auto;
   background-position: center;
-  background-blend-mode: overlay;
   z-index: -1;
 }
 

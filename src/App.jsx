@@ -42,7 +42,7 @@ function App() {
         </div>
       </nav>
       
-      {/* Hero Section с фоном из игровых обложек */}
+      {/* Hero Section with game cover background */}
       <section className="hero">
         <div className="hero-background"></div>
         <div className="hero-content-wrapper">
