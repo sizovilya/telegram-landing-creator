@@ -10,8 +10,8 @@ function App() {
       <nav className="navbar">
         <div className="container navbar-container">
           <a href="#" className="navbar-logo">
-            <GamepadIcon className="w-6 h-6 text-primary-DEFAULT" />
-            <span className="text-xl font-semibold">Gamepals</span>
+            <GamepadIcon className="gamepad-icon text-primary-DEFAULT" />
+            <span className="logo-text">Gamepals</span>
           </a>
           
           <div className="navbar-links">
@@ -24,7 +24,7 @@ function App() {
               href="https://t.me/your_channel" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn btn-sm btn-primary hidden md:flex items-center gap-2 animate-fade-in"
+              className="btn btn-channel btn-primary hidden md:flex items-center gap-2 animate-fade-in"
             >
               <Send className="w-4 h-4" />
               Channel
@@ -34,7 +34,7 @@ function App() {
               href="https://t.me/your_bot_username" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn btn-sm btn-primary"
+              className="btn btn-primary"
             >
               Open Bot
             </a>
@@ -42,38 +42,33 @@ function App() {
         </div>
       </nav>
       
-      {/* Hero Section */}
+      {/* Hero Section с фоном из игровых обложек */}
       <section className="hero">
-        <div className="container">
-          <div className="hero-grid">
-            <div className="hero-content animate-fade-up">
-              <h1 className="hero-title">Gaming Friends Always Nearby</h1>
-              <h2 className="hero-subtitle">CS2, Dota 2, Fortnite, PUBG and other popular games. Find teammates for your favorite games right in Telegram!</h2>
-              <p className="hero-description">
-                Gamepals is a Telegram bot for finding gaming partners. Simply message the bot, create a post about looking for teammates, and receive notifications when someone wants to join your game!
-              </p>
-              <div className="hero-buttons">
-                <a 
-                  href="https://t.me/your_bot_username" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn btn-md btn-primary"
-                >
-                  Open Bot in Telegram
-                </a>
-                <a 
-                  href="https://t.me/your_channel" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn btn-md btn-secondary"
-                >
-                  Gaming Channel
-                </a>
-              </div>
-            </div>
-            <div className="hero-image animate-fade-in">
-              <img src="https://placehold.co/600x400" alt="Gamepals preview" />
-            </div>
+        <div className="hero-background"></div>
+        <div className="hero-content-wrapper">
+          <div className="hero-badge">Find Gaming Friends</div>
+          <h1 className="hero-title">Gaming Friends Always Nearby</h1>
+          <h2 className="hero-subtitle">CS2, Dota 2, Fortnite, PUBG and other popular games. Find teammates for your favorite games right in Telegram!</h2>
+          <p className="hero-description">
+            Gamepals is a Telegram bot for finding gaming partners. Simply message the bot, create a post about looking for teammates, and receive notifications when someone wants to join your game!
+          </p>
+          <div className="hero-buttons">
+            <a 
+              href="https://t.me/your_bot_username" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-lg btn-primary"
+            >
+              Open Bot in Telegram
+            </a>
+            <a 
+              href="https://t.me/your_channel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-lg btn-secondary"
+            >
+              Gaming Channel
+            </a>
           </div>
         </div>
       </section>
