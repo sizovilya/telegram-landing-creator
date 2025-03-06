@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 // Import icons
@@ -44,7 +45,11 @@ function App() {
       
       {/* Hero Section with game cover background */}
       <section className="hero">
-        <div className="hero-background"></div>
+        <div className="hero-background">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div key={i} className="game-cover"></div>
+          ))}
+        </div>
         <div className="hero-content-wrapper">
           <div className="hero-badge">Find Gaming Friends</div>
           <h1 className="hero-title">Gaming Friends Always Nearby</h1>

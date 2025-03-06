@@ -1,4 +1,3 @@
-
 /* Base styles */
 @tailwind base;
 @tailwind components;
@@ -19,17 +18,39 @@
   }
 
   * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    @apply border-border;
   }
 
   body {
-    font-family: 'Inter', sans-serif;
-    color: hsl(var(--foreground));
-    background-color: white;
+    @apply bg-background text-foreground;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Сброс стилей для root элемента */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Дополнительные анимации */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
 }
 
@@ -239,30 +260,52 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7u0c.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co48rz.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg'),
-                    url('https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg');
-  background-size: 20% auto;
-  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+  padding: 15px;
   z-index: -1;
 }
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.game-cover {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-cover:nth-child(1) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg'); }
+.game-cover:nth-child(2) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg'); }
+.game-cover:nth-child(3) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg'); }
+.game-cover:nth-child(4) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg'); }
+.game-cover:nth-child(5) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg'); }
+.game-cover:nth-child(6) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg'); }
+.game-cover:nth-child(7) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg'); }
+.game-cover:nth-child(8) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg'); }
+.game-cover:nth-child(9) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg'); }
+.game-cover:nth-child(10) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg'); }
+.game-cover:nth-child(11) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg'); }
+.game-cover:nth-child(12) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg'); }
+.game-cover:nth-child(13) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg'); }
+.game-cover:nth-child(14) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg'); }
+.game-cover:nth-child(15) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg'); }
+.game-cover:nth-child(16) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg'); }
+.game-cover:nth-child(17) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co7u0c.jpg'); }
+.game-cover:nth-child(18) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co48rz.jpg'); }
+.game-cover:nth-child(19) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg'); }
+.game-cover:nth-child(20) { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg'); }
 
 .hero-content-wrapper {
   max-width: 800px;
@@ -278,6 +321,8 @@ body {
   gap: 1.5rem;
   margin-top: 2rem;
   animation: fade-up 0.5s ease-out;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-badge {
