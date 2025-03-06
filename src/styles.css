@@ -225,7 +225,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/public/lovable-uploads/e5b930b6-ee9e-4c7e-8e96-863c49654b55.png');
+  background-image: url('/public/lovable-uploads/e5b930b6-ee9e-4c7e-8e96-863c49654b55.png'), 
+    url('/images/cs2-bg.jpg'), 
+    url('/images/dota2-bg.jpg'),
+    url('/images/valorant-bg.jpg'),
+    url('/images/fortnite-bg.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -284,6 +288,357 @@ body {
   margin-top: 1rem;
 }
 
+/* Features Section */
+.features {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.features-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.features-subtitle {
+  font-size: 1.25rem;
+  color: #64748B;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+  background-color: rgba(155, 135, 245, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* Games Section */
+.games {
+  padding: 5rem 0;
+}
+
+.games-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.games-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.games-subtitle {
+  font-size: 1.25rem;
+  color: #64748B;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.game-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.game-image.cs2 {
+  background-image: url('/images/cs2.jpg');
+}
+
+.game-image.dota2 {
+  background-image: url('/images/dota2.jpg');
+}
+
+.game-image.valorant {
+  background-image: url('/images/valorant.jpg');
+}
+
+.game-image.fortnite {
+  background-image: url('/images/fortnite.jpg');
+}
+
+.game-image.lol {
+  background-image: url('/images/lol.jpg');
+}
+
+.game-image.apex {
+  background-image: url('/images/apex.jpg');
+}
+
+.game-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.game-players {
+  color: #9b87f5;
+  font-weight: 500;
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.testimonials-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.testimonials-subtitle {
+  font-size: 1.25rem;
+  color: #64748B;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-content {
+  color: #4A4A4A;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(155, 135, 245, 0.2);
+  color: #9b87f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.testimonial-game {
+  color: #64748B;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta {
+  padding: 5rem 0;
+  background: linear-gradient(to right, rgba(155, 135, 245, 0.9), rgba(126, 105, 171, 0.9));
+  color: white;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta .btn-primary {
+  background: white;
+  color: #9b87f5;
+}
+
+.cta .btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.cta .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #1A1F2C;
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.footer-links-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links-list a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: white;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .navbar-links {
@@ -315,6 +670,30 @@ body {
   .btn-lg {
     width: 100%;
   }
+  
+  .features-title,
+  .games-title,
+  .testimonials-title,
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-links {
+    gap: 2rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -325,5 +704,11 @@ body {
   
   .language-selector {
     display: none;
+  }
+  
+  .features-grid,
+  .games-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
