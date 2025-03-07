@@ -286,6 +286,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .game-cover-1 { background-image: url('https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg'); }
@@ -787,4 +789,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
