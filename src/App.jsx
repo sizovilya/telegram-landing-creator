@@ -46,9 +46,26 @@ function App() {
       {/* Hero Section with game cover background */}
       <section className="hero">
         <div className="hero-background">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div key={i} className={`game-cover game-cover-${i+1}`}></div>
-          ))}
+          <div className="game-cover game-cover-1"></div>
+          <div className="game-cover game-cover-2"></div>
+          <div className="game-cover game-cover-3"></div>
+          <div className="game-cover game-cover-4"></div>
+          <div className="game-cover game-cover-5"></div>
+          <div className="game-cover game-cover-6"></div>
+          <div className="game-cover game-cover-7"></div>
+          <div className="game-cover game-cover-8"></div>
+          <div className="game-cover game-cover-9"></div>
+          <div className="game-cover game-cover-10"></div>
+          <div className="game-cover game-cover-11"></div>
+          <div className="game-cover game-cover-12"></div>
+          <div className="game-cover game-cover-13"></div>
+          <div className="game-cover game-cover-14"></div>
+          <div className="game-cover game-cover-15"></div>
+          <div className="game-cover game-cover-16"></div>
+          <div className="game-cover game-cover-17"></div>
+          <div className="game-cover game-cover-18"></div>
+          <div className="game-cover game-cover-19"></div>
+          <div className="game-cover game-cover-20"></div>
         </div>
         <div className="hero-content-wrapper">
           <div className="hero-badge">Find Gaming Friends</div>
