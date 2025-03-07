@@ -47,7 +47,7 @@ function App() {
       <section className="hero">
         <div className="hero-background">
           {Array.from({ length: 20 }).map((_, i) => (
-            <div key={i} className="game-cover"></div>
+            <div key={i} className={`game-cover game-cover-${i+1}`}></div>
           ))}
         </div>
         <div className="hero-content-wrapper">
