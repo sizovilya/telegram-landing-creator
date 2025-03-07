@@ -46,26 +46,66 @@ function App() {
       {/* Hero Section with game cover background */}
       <section className="hero">
         <div className="hero-background">
-          <div className="game-cover game-cover-1"></div>
-          <div className="game-cover game-cover-2"></div>
-          <div className="game-cover game-cover-3"></div>
-          <div className="game-cover game-cover-4"></div>
-          <div className="game-cover game-cover-5"></div>
-          <div className="game-cover game-cover-6"></div>
-          <div className="game-cover game-cover-7"></div>
-          <div className="game-cover game-cover-8"></div>
-          <div className="game-cover game-cover-9"></div>
-          <div className="game-cover game-cover-10"></div>
-          <div className="game-cover game-cover-11"></div>
-          <div className="game-cover game-cover-12"></div>
-          <div className="game-cover game-cover-13"></div>
-          <div className="game-cover game-cover-14"></div>
-          <div className="game-cover game-cover-15"></div>
-          <div className="game-cover game-cover-16"></div>
-          <div className="game-cover game-cover-17"></div>
-          <div className="game-cover game-cover-18"></div>
-          <div className="game-cover game-cover-19"></div>
-          <div className="game-cover game-cover-20"></div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg" alt="Game cover 1" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg" alt="Game cover 2" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg" alt="Game cover 3" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg" alt="Game cover 4" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg" alt="Game cover 5" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg" alt="Game cover 6" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg" alt="Game cover 7" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg" alt="Game cover 8" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg" alt="Game cover 9" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg" alt="Game cover 10" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg" alt="Game cover 11" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg" alt="Game cover 12" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg" alt="Game cover 13" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg" alt="Game cover 14" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg" alt="Game cover 15" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg" alt="Game cover 16" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7u0c.jpg" alt="Game cover 17" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co48rz.jpg" alt="Game cover 18" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg" alt="Game cover 19" />
+          </div>
+          <div className="game-cover">
+            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg" alt="Game cover 20" />
+          </div>
         </div>
         <div className="hero-content-wrapper">
           <div className="hero-badge">Find Gaming Friends</div>
