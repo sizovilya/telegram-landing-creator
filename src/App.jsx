@@ -107,6 +107,7 @@ function App() {
             <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg" alt="Game cover 20" />
           </div>
         </div>
+        
         <div className="hero-content-wrapper">
           <div className="hero-badge">Find Gaming Friends</div>
           <h1 className="hero-title">Gaming Friends Always Nearby</h1>
