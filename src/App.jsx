@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Import icons
-import { GamepadIcon, ArrowRight, Send, CheckCircle, Users, Bell, Gamepad } from "lucide-react";
+import { GamepadIcon, ArrowRight, Send, Bell, Gamepad, Users } from "lucide-react";
 
 function App() {
   return (
@@ -46,66 +46,32 @@ function App() {
       {/* Hero Section with game cover background */}
       <section className="hero">
         <div className="hero-background">
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg" alt="Game cover 1" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg" alt="Game cover 2" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg" alt="Game cover 3" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg" alt="Game cover 4" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg" alt="Game cover 5" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg" alt="Game cover 6" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg" alt="Game cover 7" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg" alt="Game cover 8" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg" alt="Game cover 9" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg" alt="Game cover 10" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg" alt="Game cover 11" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg" alt="Game cover 12" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg" alt="Game cover 13" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg" alt="Game cover 14" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg" alt="Game cover 15" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg" alt="Game cover 16" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7u0c.jpg" alt="Game cover 17" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co48rz.jpg" alt="Game cover 18" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg" alt="Game cover 19" />
-          </div>
-          <div className="game-cover">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg" alt="Game cover 20" />
-          </div>
+          {[
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co92du.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co7j43.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ok7.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co49wj.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wzo.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co89n1.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r6t.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xlq.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co5cxf.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co84ii.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qlk.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co9f4v.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co7dfn.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7z.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w4j.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co7u0c.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co48rz.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg",
+            "https://images.igdb.com/igdb/image/upload/t_cover_big/co86ix.jpg"
+          ].map((imageUrl, index) => (
+            <div key={`game-cover-${index}`} className="game-cover">
+              <img src={imageUrl} alt={`Game cover ${index + 1}`} />
+            </div>
+          ))}
         </div>
         
         <div className="hero-content-wrapper">
@@ -139,11 +105,13 @@ function App() {
       {/* Features Section */}
       <section className="features">
         <div className="container">
-          <h2 className="section-title">Made for Gamers</h2>
-          <p className="section-subtitle">Gamepals is a Telegram bot that helps you find perfect teammates for your favorite games</p>
+          <div className="features-heading">
+            <h2 className="features-title">Made for Gamers</h2>
+            <p className="features-subtitle">Gamepals is a Telegram bot that helps you find perfect teammates for your favorite games</p>
+          </div>
           
           <div className="features-grid">
-            <div className="feature-card hover-scale">
+            <div className="feature-card">
               <div className="feature-icon">
                 <Gamepad className="w-5 h-5" />
               </div>
@@ -151,7 +119,7 @@ function App() {
               <p className="feature-description">CS2, Dota 2, Fortnite, PUBG and many others. Find partners for any game</p>
             </div>
             
-            <div className="feature-card hover-scale">
+            <div className="feature-card">
               <div className="feature-icon">
                 <Send className="w-5 h-5" />
               </div>
@@ -159,7 +127,7 @@ function App() {
               <p className="feature-description">Create a post through the bot and receive notifications about new partners right in Telegram</p>
             </div>
             
-            <div className="feature-card hover-scale">
+            <div className="feature-card">
               <div className="feature-icon">
                 <Users className="w-5 h-5" />
               </div>
@@ -167,7 +135,7 @@ function App() {
               <p className="feature-description">Thousands of gamers have already found their perfect teammates through Gamepals in Telegram</p>
             </div>
             
-            <div className="feature-card hover-scale">
+            <div className="feature-card">
               <div className="feature-icon">
                 <Bell className="w-5 h-5" />
               </div>
@@ -181,19 +149,17 @@ function App() {
       {/* Games Section */}
       <section className="games">
         <div className="container">
-          <h2 className="section-title">Find Partners for Any Game</h2>
-          <p className="section-subtitle">We support all popular multiplayer games</p>
+          <div className="games-heading">
+            <h2 className="games-title">Find Partners for Any Game</h2>
+            <p className="games-subtitle">We support all popular multiplayer games</p>
+          </div>
           
           <div className="games-grid">
             {['CS2', 'Dota 2', 'Fortnite', 'PUBG', 'Apex Legends', 'Valorant', 'League of Legends', 'Overwatch'].map((game) => (
               <div key={game} className="game-card">
-                <img 
-                  src={`https://placehold.co/400x225/333/fff?text=${game}`} 
-                  alt={game} 
-                  className="game-image" 
-                />
-                <div className="game-overlay">{game}</div>
-                <div className="game-overlay-hover">Click to find teammates</div>
+                <div className="game-image" style={{backgroundImage: `url(https://placehold.co/400x225/333/fff?text=${game})`}}></div>
+                <h3 className="game-title">{game}</h3>
+                <p className="game-players">1000+ active players</p>
               </div>
             ))}
           </div>
@@ -203,39 +169,41 @@ function App() {
       {/* Testimonials Section */}
       <section className="testimonials">
         <div className="container">
-          <h2 className="section-title">User Testimonials</h2>
-          <p className="section-subtitle">Find out what people who already use our app are saying</p>
+          <div className="testimonials-heading">
+            <h2 className="testimonials-title">User Testimonials</h2>
+            <p className="testimonials-subtitle">Find out what people who already use our app are saying</p>
+          </div>
           
           <div className="testimonials-grid">
-            <div className="testimonial-card hover-scale">
+            <div className="testimonial-card">
               <p className="testimonial-content">Found a permanent team for MM in CS2 in just one day. Now we play together every evening!</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">A</div>
-                <div className="testimonial-info">
-                  <span className="testimonial-name">Alexander</span>
-                  <span className="testimonial-role">CS2 player</span>
+                <div>
+                  <p className="testimonial-name">Alexander</p>
+                  <p className="testimonial-game">CS2 player</p>
                 </div>
               </div>
             </div>
             
-            <div className="testimonial-card hover-scale">
+            <div className="testimonial-card">
               <p className="testimonial-content">Convenient for finding a team for ranked games. You can specify your rank and role to find suitable teammates.</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">E</div>
-                <div className="testimonial-info">
-                  <span className="testimonial-name">Elena</span>
-                  <span className="testimonial-role">Dota 2 player</span>
+                <div>
+                  <p className="testimonial-name">Elena</p>
+                  <p className="testimonial-game">Dota 2 player</p>
                 </div>
               </div>
             </div>
             
-            <div className="testimonial-card hover-scale">
+            <div className="testimonial-card">
               <p className="testimonial-content">No more playing with randoms. Within a few minutes I find partners of the right level for cooperative gameplay.</p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar">D</div>
-                <div className="testimonial-info">
-                  <span className="testimonial-name">Dmitry</span>
-                  <span className="testimonial-role">Fortnite player</span>
+                <div>
+                  <p className="testimonial-name">Dmitry</p>
+                  <p className="testimonial-game">Fortnite player</p>
                 </div>
               </div>
             </div>
@@ -246,9 +214,9 @@ function App() {
       {/* CTA Section */}
       <section className="cta">
         <div className="container">
-          <div className="cta-content animate-fade-up">
-            <h2 className="section-title">Ready to find your Gamepals?</h2>
-            <p className="section-subtitle">Join thousands of players who have already found friends for gaming together</p>
+          <div className="cta-content">
+            <h2 className="cta-title">Ready to find your Gamepals?</h2>
+            <p className="cta-description">Join thousands of players who have already found friends for gaming together</p>
             
             <div className="cta-buttons">
               <a 
@@ -277,19 +245,31 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-logo">
-              <GamepadIcon className="w-5 h-5 text-primary-DEFAULT" />
+              <GamepadIcon className="w-5 h-5 text-white" />
               <span className="font-semibold">Gamepals</span>
             </div>
             
             <div className="footer-links">
-              <a href="#" className="text-link">Terms</a>
-              <a href="#" className="text-link">Privacy</a>
-              <a href="#" className="text-link">Contact</a>
+              <div>
+                <h3 className="footer-links-title">Legal</h3>
+                <ul className="footer-links-list">
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="footer-links-title">Company</h3>
+                <ul className="footer-links-list">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
             </div>
-            
-            <div className="footer-copyright">
-              © 2023 Gamepals. All rights reserved.
-            </div>
+          </div>
+          
+          <div className="footer-bottom">
+            <p className="footer-copyright">© 2023 Gamepals. All rights reserved.</p>
           </div>
         </div>
       </footer>

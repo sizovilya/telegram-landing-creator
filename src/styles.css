@@ -1,3 +1,4 @@
+
 /* Base styles */
 @tailwind base;
 @tailwind components;
@@ -30,28 +31,31 @@
   }
 }
 
-/* Сброс стилей для root элемента */
-#root {
-  max-width: 100%;
+/* Reset and general styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-align: left;
 }
 
-/* Дополнительные анимации */
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4A4A4A;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Animations */
@@ -94,33 +98,6 @@
 
 .animate-bounce {
   animation: bounce 1.5s infinite ease-in-out;
-}
-
-/* Reset and general styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #4A4A4A;
-  overflow-x: hidden;
-}
-
-.app {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 /* Navbar styles */
@@ -189,15 +166,6 @@ body {
   gap: 1rem;
 }
 
-.language-selector {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  color: #4A4A4A;
-  font-weight: 500;
-  text-decoration: none;
-}
-
 /* Button styles */
 .btn {
   display: inline-flex;
@@ -252,6 +220,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding-top: 70px; /* для учета высоты navbar */
 }
 
 .hero-background {
@@ -470,30 +439,6 @@ body {
   background-position: center;
 }
 
-.game-image.cs2 {
-  background-image: url('/images/cs2.jpg');
-}
-
-.game-image.dota2 {
-  background-image: url('/images/dota2.jpg');
-}
-
-.game-image.valorant {
-  background-image: url('/images/valorant.jpg');
-}
-
-.game-image.fortnite {
-  background-image: url('/images/fortnite.jpg');
-}
-
-.game-image.lol {
-  background-image: url('/images/lol.jpg');
-}
-
-.game-image.apex {
-  background-image: url('/images/apex.jpg');
-}
-
 .game-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -692,20 +637,6 @@ body {
   font-size: 0.9rem;
 }
 
-.footer-social {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.social-link {
-  color: rgba(255, 255, 255, 0.7);
-  transition: color 0.2s;
-}
-
-.social-link:hover {
-  color: white;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .navbar-links {
@@ -769,8 +700,8 @@ body {
     padding: 1rem;
   }
   
-  .language-selector {
-    display: none;
+  .hero-background {
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .features-grid,
